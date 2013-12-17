@@ -95,8 +95,17 @@ public class bluetoothOsgiComp extends LoociComponent {
     		// Construct string
     		String pl = new String(ev.getPayload());
     		
+    		if (pl.indexOf("RTINQ") == -1)
+    			return;
+    		
+    		String[] plSplit = pl.split(";");
+    		
+    		String address = plSplit[0].split("=")[1];
+    		String name = plSplit[1];
+    		
+    		
     		//System.out.println("[DISPLAY] temp received from " +  ev.getSourceAddress() + "/" + ev.getSourceComp() + " at " + System.currentTimeMillis() + ": " + (int)ev.getPayload()[0]);
-    		fr.println("[BT] received INQ: " + pl);
+    		fr.println("Discovered " + name + " at address " + address);
     	}
 		
     }
