@@ -1,0 +1,14 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: bluetoothOsgi
+Bundle-SymbolicName: bluetoothOsgi
+Bundle-Version: 1.0.0
+Bundle-Activator: Bluetooth.bluetoothOsgi
+Require-Bundle: LoociOsgiServices;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Import-Package: javax.swing,
+ javax.swing.border,
+ javax.swing.text,
+ org.osgi.framework;version="1.3.0"
+Bundle-ClassPath: .
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
